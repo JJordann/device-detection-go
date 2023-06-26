@@ -36,7 +36,6 @@ import "C"
 
 // trick go vendor into not pruning the necessary binary & header files by importing a dummy package from each folder.
 import (
-	//_ "device-detection-go/dd/device-detection-cxx/build/bin"
 	_ "github.com/jjordann/device-detection-go/v4/dd/device-detection-cxx/build/bin"
 	_ "github.com/jjordann/device-detection-go/v4/dd/device-detection-cxx/build/lib"
 	_ "github.com/jjordann/device-detection-go/v4/dd/device-detection-cxx/src"

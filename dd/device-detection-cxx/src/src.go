@@ -1,3 +1,3 @@
-package src
+//go:build required
 
-import "C"
+package src

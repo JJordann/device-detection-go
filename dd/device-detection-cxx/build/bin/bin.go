@@ -1,3 +1,3 @@
-package bin
+//go:build required
 
-import "C"
+package bin

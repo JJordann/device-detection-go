@@ -1,3 +1,3 @@
-package hash
+//go:build required
 
-import "C"
+package hash
