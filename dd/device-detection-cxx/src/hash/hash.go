@@ -1,1 +1,3 @@
 package hash
+
+import "C"

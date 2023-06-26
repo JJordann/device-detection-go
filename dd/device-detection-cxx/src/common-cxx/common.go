@@ -1,1 +1,3 @@
 package common
+
+import "C"
