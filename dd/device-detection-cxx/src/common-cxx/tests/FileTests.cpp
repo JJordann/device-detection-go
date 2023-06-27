@@ -1,6 +1,6 @@
 /* *********************************************************************
  * This Original Work is copyright of 51 Degrees Mobile Experts Limited.
- * Copyright 2023 51 Degrees Mobile Experts Limited, Davidson House,
+ * Copyright 2022 51 Degrees Mobile Experts Limited, Davidson House,
  * Forbury Square, Reading, Berkshire, United Kingdom RG1 3EU.
  *
  * This Original Work is licensed under the European Union Public Licence
@@ -13,10 +13,10 @@
  * amended by the European Commission) shall be deemed incompatible for
  * the purposes of the Work and the provisions of the compatibility
  * clause in Article 5 of the EUPL shall not apply.
- *
- * If using the Work as, or as part of, a network application, by
+ * 
+ * If using the Work as, or as part of, a network application, by 
  * including the attribution notice(s) required under Article 5 of the EUPL
- * in the end user terms of the application under an appropriate heading,
+ * in the end user terms of the application under an appropriate heading, 
  * such notice(s) shall fulfill the requirements of that article.
  * ********************************************************************* */
  
@@ -27,8 +27,6 @@
 
 #include "../exceptions.h"
 #include "../file.h"
-#include "../snprintf.h"
-
 
 #ifndef _MSC_VER
 #define _rmdir rmdir
@@ -807,7 +805,7 @@ TEST_F(File, GetPath) {
 	char relativePath[FIFTYONE_DEGREES_FILE_MAX_PATH];
 	char absolutePath[FIFTYONE_DEGREES_FILE_MAX_PATH];
 	char foundPath[FIFTYONE_DEGREES_FILE_MAX_PATH];
-	Snprintf(relativePath, FIFTYONE_DEGREES_FILE_MAX_PATH, "%s/%s", tempPath1, fileName);
+	sprintf(relativePath, "%s/%s", tempPath1, fileName);
 	createDir(tempPath1);
 	createFile(relativePath);
 
@@ -821,11 +819,7 @@ TEST_F(File, GetPath) {
 		"The file was not found.";
 	
 	GET_CURRENT_DIR(absolutePath, sizeof(absolutePath));
-	
-	int written = Snprintf(absolutePath + strlen(absolutePath), FIFTYONE_DEGREES_FILE_MAX_PATH - strlen(absolutePath), "/%s", relativePath);
-	if (written < 0 || written >= (int)(FIFTYONE_DEGREES_FILE_MAX_PATH - strlen(absolutePath))) {
-		FAIL() << "The absolute path was too long.";
-	}
+	sprintf(absolutePath + strlen(absolutePath), "/%s", relativePath);
 	
 	EXPECT_STREQ(absolutePath, foundPath) <<
 		"The found file did not match the actual path.";
@@ -840,13 +834,17 @@ TEST_F(File, GetPath) {
  */
 TEST_F(File, GetPath_NoFile) {
 	char relativePath[FIFTYONE_DEGREES_FILE_MAX_PATH];
+	char absolutePath[FIFTYONE_DEGREES_FILE_MAX_PATH];
 	createDir(tempPath1);
-	Snprintf(relativePath, FIFTYONE_DEGREES_FILE_MAX_PATH, "%s/%s", tempPath1, fileName);
+	sprintf(relativePath, "%s/%s", tempPath1, fileName);
 
 	EXPECT_EQ(
 		FIFTYONE_DEGREES_STATUS_FILE_NOT_FOUND,
 		fiftyoneDegreesFileGetPath(tempPath1, fileName, NULL, 0)) <<
 		"File not found was not reported.";
+
+	GET_CURRENT_DIR(absolutePath, sizeof(absolutePath));
+	sprintf(absolutePath + strlen(absolutePath), "/%s", relativePath);
 
 	removeDir(tempPath1);
 }
@@ -857,12 +855,16 @@ TEST_F(File, GetPath_NoFile) {
  */
 TEST_F(File, GetPath_NoDirectory) {
 	char relativePath[FIFTYONE_DEGREES_FILE_MAX_PATH];
-	Snprintf(relativePath, FIFTYONE_DEGREES_FILE_MAX_PATH, "%s/%s", tempPath1, fileName);
+	char absolutePath[FIFTYONE_DEGREES_FILE_MAX_PATH];
+	sprintf(relativePath, "%s/%s", tempPath1, fileName);
 
 	EXPECT_EQ(
 		FIFTYONE_DEGREES_STATUS_FILE_NOT_FOUND,
 		fiftyoneDegreesFileGetPath(tempPath1, fileName, NULL, 0)) <<
 		"File not found was not reported.";
+
+	GET_CURRENT_DIR(absolutePath, sizeof(absolutePath));
+	sprintf(absolutePath + strlen(absolutePath), "/%s", relativePath);
 }
 
 /**
@@ -872,7 +874,7 @@ TEST_F(File, GetPath_NoDirectory) {
 TEST_F(File, GetPath_InsufficientMemory) {
 	char relativePath[FIFTYONE_DEGREES_FILE_MAX_PATH];
 	char foundPath[1];
-	Snprintf(relativePath, FIFTYONE_DEGREES_FILE_MAX_PATH, "%s/%s", tempPath1, fileName);
+	sprintf(relativePath, "%s/%s", tempPath1, fileName);
 	createDir(tempPath1);
 	createFile(relativePath);
 

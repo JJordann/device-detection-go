@@ -21,9 +21,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4804bab6-cc3d-455a-b359-0eca128fb245}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -65,7 +65,6 @@
     <ClCompile Include="..\..\tests\MemoryLeakTests.cpp" />
     <ClCompile Include="..\..\tests\OverridesTests.cpp" />
     <ClCompile Include="..\..\tests\pch.cpp" />
-    <ClCompile Include="..\..\tests\PoolTests.cpp" />
     <ClCompile Include="..\..\tests\PropertiesTests.cpp" />
     <ClCompile Include="..\..\tests\PropertyMetaDataTests.cpp" />
     <ClCompile Include="..\..\tests\PseudoHeaderTests.cpp" />

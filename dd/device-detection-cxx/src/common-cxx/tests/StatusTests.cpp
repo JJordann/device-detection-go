@@ -1,6 +1,6 @@
 /* *********************************************************************
  * This Original Work is copyright of 51 Degrees Mobile Experts Limited.
- * Copyright 2023 51 Degrees Mobile Experts Limited, Davidson House,
+ * Copyright 2022 51 Degrees Mobile Experts Limited, Davidson House,
  * Forbury Square, Reading, Berkshire, United Kingdom RG1 3EU.
  *
  * This Original Work is licensed under the European Union Public Licence
@@ -13,17 +13,16 @@
  * amended by the European Commission) shall be deemed incompatible for
  * the purposes of the Work and the provisions of the compatibility
  * clause in Article 5 of the EUPL shall not apply.
- *
- * If using the Work as, or as part of, a network application, by
+ * 
+ * If using the Work as, or as part of, a network application, by 
  * including the attribution notice(s) required under Article 5 of the EUPL
- * in the end user terms of the application under an appropriate heading,
+ * in the end user terms of the application under an appropriate heading, 
  * such notice(s) shall fulfill the requirements of that article.
  * ********************************************************************* */
  
 #include "pch.h"
 #include "../string.h"
 #include "../status.h"
-#include "../snprintf.h"
 
 /* Test file name to use in tests. */
 static const char *fileName = "somefilename.dat";
@@ -148,7 +147,7 @@ TEST(Status, Get_NotSetMessage) {
 		FIFTYONE_DEGREES_STATUS_NOT_SET,
 		NULL);
 	assertValidMessage(message);
-	Snprintf(code, 3, "%d", FIFTYONE_DEGREES_STATUS_NOT_SET);
+	sprintf(code, "%d", FIFTYONE_DEGREES_STATUS_NOT_SET);
 	assertContains(message, code);
 	free((void*)message);
 }
@@ -257,7 +256,7 @@ TEST(Status, Get_NonExistantCode) {
 	fiftyoneDegreesStatusCode invalidStatus = (fiftyoneDegreesStatusCode)1000;
 	const char *message = fiftyoneDegreesStatusGetMessage(invalidStatus, NULL);
 	assertValidMessage(message);
-	Snprintf(code, 5, "%d", invalidStatus);
+	sprintf(code, "%d", invalidStatus);
 	assertContains(message, code);
 	free((void*)message);
 }
@@ -271,7 +270,7 @@ TEST(Status, Get_NegativeCode) {
 	fiftyoneDegreesStatusCode invalidStatus = (fiftyoneDegreesStatusCode)-1;
 	const char *message = fiftyoneDegreesStatusGetMessage(invalidStatus, NULL);
 	assertValidMessage(message);
-	Snprintf(code, 3, "%d", invalidStatus);
+	sprintf(code, "%d", invalidStatus);
 	assertContains(message, code);
 	free((void*)message);
 }

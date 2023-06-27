@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 set (CMAKE_C_STANDARD 11)
-set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 11)
 
 # Minimum required versions for MSVC
 set (MIN_VS_TOOLSET_VERSION 142)
@@ -53,14 +53,10 @@ option(MemoryOnly "MemoryOnly" OFF)
 option(NoThreading "NoThreading" OFF)
 option(ExceptionsDisabled "ExceptionsDisabled" OFF)
 
-if (32bit AND NOT IS_ARM)
+if (32bit AND NOT MSVC AND NOT IS_ARM)
 	message("-- 32 bit compilation")
-	if (NOT MSVC)
-		set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
-		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
-	else()
-		set(CMAKE_VS_PLATFORM_NAME "Win32")
-	endif()
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m32")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
 endif()
 
 if (NOT MSVC AND NOT APPLE)
@@ -181,7 +177,7 @@ else ()
 endif()
 
 target_link_libraries(CommonTests fiftyone-common-cxx gtest_main)
-gtest_discover_tests(CommonTests PROPERTIES TEST_DISCOVERY_TIMEOUT 600)
+gtest_discover_tests(CommonTests)
 set_target_properties(CommonTests PROPERTIES FOLDER "Tests") 
 
 if (CMAKE_COMPILER_IS_GNUCC)

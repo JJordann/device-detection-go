@@ -1,6 +1,6 @@
 /* *********************************************************************
  * This Original Work is copyright of 51 Degrees Mobile Experts Limited.
- * Copyright 2023 51 Degrees Mobile Experts Limited, Davidson House,
+ * Copyright 2022 51 Degrees Mobile Experts Limited, Davidson House,
  * Forbury Square, Reading, Berkshire, United Kingdom RG1 3EU.
  *
  * This Original Work is licensed under the European Union Public Licence
@@ -13,10 +13,10 @@
  * amended by the European Commission) shall be deemed incompatible for
  * the purposes of the Work and the provisions of the compatibility
  * clause in Article 5 of the EUPL shall not apply.
- *
- * If using the Work as, or as part of, a network application, by
+ * 
+ * If using the Work as, or as part of, a network application, by 
  * including the attribution notice(s) required under Article 5 of the EUPL
- * in the end user terms of the application under an appropriate heading,
+ * in the end user terms of the application under an appropriate heading, 
  * such notice(s) shall fulfill the requirements of that article.
  * ********************************************************************* */
 
@@ -25,7 +25,7 @@
 
 const static char _dataFolderName[] = "device-detection-data";
 
-const static char* _HashFileNames[] = { "TAC-HashV41.hash", "51Degrees-EnterpriseV4.1.hash", "51Degrees-LiteV4.1.hash" };
+const static char* _HashFileNames[] = { "51Degrees-EnterpriseV4.1.hash", "51Degrees-LiteV4.1.hash" };
 
 const static int _HashFileNamesLength = 2;
 
@@ -35,7 +35,7 @@ const static char _userAgentsFileName[] = "20000 User Agents.csv";
 
 const static char _evidenceFileName[] = "20000 Evidence Records.yml";
 
-const static char* _fileTypes[] = { "TAC", "Enterprise", "Lite" };
+const static char* _fileTypes[] = { "Enterprise", "Lite" };
 
 const static char _reloadTestFile[] = "reload-test-file.dat";
 

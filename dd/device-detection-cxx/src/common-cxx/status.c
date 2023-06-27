@@ -1,6 +1,6 @@
 /* *********************************************************************
  * This Original Work is copyright of 51 Degrees Mobile Experts Limited.
- * Copyright 2023 51 Degrees Mobile Experts Limited, Davidson House,
+ * Copyright 2022 51 Degrees Mobile Experts Limited, Davidson House,
  * Forbury Square, Reading, Berkshire, United Kingdom RG1 3EU.
  *
  * This Original Work is licensed under the European Union Public Licence
@@ -13,10 +13,10 @@
  * amended by the European Commission) shall be deemed incompatible for
  * the purposes of the Work and the provisions of the compatibility
  * clause in Article 5 of the EUPL shall not apply.
- *
- * If using the Work as, or as part of, a network application, by
+ * 
+ * If using the Work as, or as part of, a network application, by 
  * including the attribution notice(s) required under Article 5 of the EUPL
- * in the end user terms of the application under an appropriate heading,
+ * in the end user terms of the application under an appropriate heading, 
  * such notice(s) shall fulfill the requirements of that article.
  * ********************************************************************* */
 
@@ -100,11 +100,7 @@ static StatusMessage messages[] = {
 	{ INSUFFICIENT_HANDLES,
 		"Insufficient handles available in the pool. Verify the pool has " 
 		"sufficient handles to support the maximum number of concurrent "
-		"threads. This can be set when creating the resource containg the "
-		"pool. Another way to avoid this is by using an in-memory "
-		"configuration, which avoids using file handles completely, and "
-		"removes any limit on concurrency. For info see "
-		"https://51degrees.com/documentation/4.4/_device_detection__features__concurrent_processing.html"},
+		"threads." },
 	{ COLLECTION_INDEX_OUT_OF_RANGE, 
 		"Index used to retrieve an item from a collection was out of range." },
 	{ COLLECTION_OFFSET_OUT_OF_RANGE, 
@@ -144,7 +140,7 @@ const char* fiftyoneDegreesStatusGetMessage(
 				strlen(current->message) + 1;
 			message = (char*)Malloc(messageSize);
 			if (message != NULL) {
-				Snprintf(message, messageSize, current->message, fileName);
+				sprintf(message, current->message, fileName);
 			}
 			break;
 		}
@@ -152,7 +148,7 @@ const char* fiftyoneDegreesStatusGetMessage(
 	if( message == NULL) {
 		messageSize = sizeof(defaultMessage) + 5;
 		message = (char*)Malloc(messageSize);
-		Snprintf(message, messageSize, defaultMessage, (int)status);
+		sprintf(message, defaultMessage, (int)status);
 	}
 	return message;
 }

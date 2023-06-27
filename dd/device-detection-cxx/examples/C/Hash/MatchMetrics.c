@@ -1,6 +1,6 @@
 /* *********************************************************************
  * This Original Work is copyright of 51 Degrees Mobile Experts Limited.
- * Copyright 2023 51 Degrees Mobile Experts Limited, Davidson House,
+ * Copyright 2022 51 Degrees Mobile Experts Limited, Davidson House,
  * Forbury Square, Reading, Berkshire, United Kingdom RG1 3EU.
  *
  * This Original Work is licensed under the European Union Public Licence
@@ -13,10 +13,10 @@
  * amended by the European Commission) shall be deemed incompatible for
  * the purposes of the Work and the provisions of the compatibility
  * clause in Article 5 of the EUPL shall not apply.
- *
- * If using the Work as, or as part of, a network application, by
+ * 
+ * If using the Work as, or as part of, a network application, by 
  * including the attribution notice(s) required under Article 5 of the EUPL
- * in the end user terms of the application under an appropriate heading,
+ * in the end user terms of the application under an appropriate heading, 
  * such notice(s) shall fulfill the requirements of that article.
  * ********************************************************************* */
 
@@ -245,7 +245,6 @@ void fiftyoneDegreesHashMatchMetrics(
 		mobileUserAgent,
 		strlen(mobileUserAgent),
 		exception);
-	EXCEPTION_THROW;
 	outputMatchMetrics(results);
 
 	// Carries out a match for a desktop User-Agent.
@@ -255,7 +254,6 @@ void fiftyoneDegreesHashMatchMetrics(
 		desktopUserAgent,
 		strlen(desktopUserAgent),
 		exception);
-	EXCEPTION_THROW;
 	outputMatchMetrics(results);
 
 	// Carries out a match for a MediaHub User-Agent.
@@ -265,7 +263,6 @@ void fiftyoneDegreesHashMatchMetrics(
 		mediaHubUserAgent,
 		strlen(mediaHubUserAgent),
 		exception);
-	EXCEPTION_THROW;
 	outputMatchMetrics(results);
 
 	// Ensure the results are freed to avoid memory leaks.
