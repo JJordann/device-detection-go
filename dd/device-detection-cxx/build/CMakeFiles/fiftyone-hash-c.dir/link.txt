@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libfiftyone-hash-c.a CMakeFiles/fiftyone-hash-c.dir/src/hash/graph.c.o CMakeFiles/fiftyone-hash-c.dir/src/hash/hash.c.o
+/usr/bin/ranlib lib/libfiftyone-hash-c.a

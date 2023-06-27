@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/Base.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/CacheTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/CollectionConfigTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/CollectionTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/CoordinateTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/EngineTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/EvidenceTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/EvidenceWithHeadersTests_MultipleHeaders.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/EvidenceWithHeadersTests_NoHeaders.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/EvidenceWithHeadersTests_SingleHeader.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/ExampleTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/FileHandle.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/FileTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/FloatTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/HeadersTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/IpHeaderParserTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/IpParserTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/MemoryLeakTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/OverridesTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/PropertiesTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/PropertyMetaDataTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/PseudoHeaderTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/RequiredPropertiesConfigTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/ResourceManagerTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/StatusTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/StringCollection.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/TestStrings.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/TextFileTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/ThreadingTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/ValueTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/YamlFileTests.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/main.cpp.o"
+  "CMakeFiles/CommonTests.dir/src/common-cxx/tests/pch.cpp.o"
+  "CommonTests[1]_tests.cmake"
+  "bin/CommonTests"
+  "bin/CommonTests.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/CommonTests.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

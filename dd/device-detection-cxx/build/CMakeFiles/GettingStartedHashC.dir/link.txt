@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/GettingStartedHashC.dir/examples/C/Hash/GettingStarted.c.o CMakeFiles/GettingStartedHashC.dir/examples/C/Hash/ExampleBase.c.o -o bin/GettingStartedHashC   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib lib/libfiftyone-hash-c.a lib/libfiftyone-device-detection-c.a lib/libfiftyone-common-c.a -lpthread /usr/local/lib/libatomic.so -lm 

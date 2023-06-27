@@ -1,0 +1,14 @@
+# Target labels
+ googletest
+# Source files and their labels
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/CMakeFiles/googletest
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/CMakeFiles/googletest.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/CMakeFiles/googletest-complete.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule
+/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule

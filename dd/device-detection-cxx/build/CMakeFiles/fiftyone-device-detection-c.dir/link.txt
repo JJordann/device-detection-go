@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libfiftyone-device-detection-c.a CMakeFiles/fiftyone-device-detection-c.dir/src/dataset-dd.c.o CMakeFiles/fiftyone-device-detection-c.dir/src/results-dd.c.o
+/usr/bin/ranlib lib/libfiftyone-device-detection-c.a

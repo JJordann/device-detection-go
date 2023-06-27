@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/libfiftyone-device-detection-cxx.a CMakeFiles/fiftyone-device-detection-cxx.dir/src/ConfigDeviceDetection.cpp.o CMakeFiles/fiftyone-device-detection-cxx.dir/src/EngineDeviceDetection.cpp.o CMakeFiles/fiftyone-device-detection-cxx.dir/src/EvidenceDeviceDetection.cpp.o CMakeFiles/fiftyone-device-detection-cxx.dir/src/ResultsDeviceDetection.cpp.o
+/usr/bin/ranlib lib/libfiftyone-device-detection-cxx.a

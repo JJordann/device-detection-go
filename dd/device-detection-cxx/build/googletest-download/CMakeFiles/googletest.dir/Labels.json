@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/CMakeFiles/googletest"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/CMakeFiles/googletest.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/CMakeFiles/googletest-complete.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule"
+		},
+		{
+			"file" : "/b1/common/51degfork/device-detection-go/dd/device-detection-cxx/build/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}
